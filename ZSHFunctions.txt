@@ -26,3 +26,17 @@ function updateResume() {
         git push heroku master
         echo Pushed to heroku with comments: $1
 }
+
+function initialCommit() {
+        git init
+        git add .
+        git commit -m "Initial Commit"
+        hub create
+        git push -u origin HEAD
+}
+
+function updateGitHub() {
+        git add .
+        git commit -m $1
+        git push -u origin HEAD
+}
