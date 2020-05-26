@@ -1,0 +1,28 @@
+function create() {
+    cd
+    mkdir $HOME/Projects/MyProjects/$1
+    cd $HOME/Projects/MyProjects/$1
+    echo Folder created for $1
+    echo Opening VS Code...
+    code .
+}
+
+function open() {
+        cd
+        cd $HOME/Projects/MyProjects/$1
+        echo Opening $1 in VSCODE
+        code .
+}
+
+function editfunctions {
+        nano ~/.zshrc
+}
+
+function updateResume() {
+        cd
+        cd $HOME/djangoresume/djangoresume/
+        git add .
+        git commit -am $1
+        git push heroku master
+        echo Pushed to heroku with comments: $1
+}
