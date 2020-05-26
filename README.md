@@ -1,0 +1,1 @@
+A collection of functions used to automate project creation, opening, editing. Includes functions to push to create GitHub Repositories and push updates to GitHub.
